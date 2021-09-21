@@ -18,7 +18,7 @@ public static HttpResponseMessage Run(HttpRequestMessage req, TraceWriter log)
         var stream = new FileStream(filePath, FileMode.Open);
         response.Content = new StreamContent(stream);
         response.Content.Headers.ContentType = new MediaTypeHeaderValue(GetMimeType(filePath));
-        return response;
+        return response;   
     }
     catch
     {
